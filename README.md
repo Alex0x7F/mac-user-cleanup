@@ -1,7 +1,7 @@
 # Mac User Cleanup - Delete inactive accounts
 
 Deletes inactive local user accounts and home folders on macOS after 30 days.  
-Designed for Macs bound to Active Directory and deployed via Lightspeed MDM.
+Designed for Macs bound to Active Directory and deployed via MDM.
 
 ---
 
