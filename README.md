@@ -1,10 +1,22 @@
 # mac-user-cleanup
 
-Deletes inactive local user accounts and home folders on macOS after 30 days.
+Deletes inactive local user accounts and home folders on macOS after 30 days.  
+Designed for Macs bound to Active Directory and deployed via Lightspeed MDM.
 
-## Use
-1. Edit `THRESHOLD` and `USER_HOME_BASE` in `cleanup_inactive_users.sh`.
-2. Deploy both files via MDM (script + LaunchDaemon plist).
-3. Logs to `/var/log/user_cleanup.log`.
+---
 
-Test before production.
+## Features
+- Deletes local user accounts and home directories older than 30 days.
+- Skips admin, shared, and system accounts.
+- Logs all actions to `/var/log/user_cleanup.log`.
+- Safe to deploy via MDM or LaunchDaemon.
+
+---
+
+## Configuration
+Edit these variables in `cleanup_inactive_users.sh` before deployment:
+
+```bash
+THRESHOLD=30
+USER_HOME_BASE="/Users"
+LOG_FILE="/var/log/user_cleanup.log"
