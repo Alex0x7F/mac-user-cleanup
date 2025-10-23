@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" \
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <Label>com.org.usercleanup</Label>
+  <ProgramArguments>
+    <string>/usr/local/bin/cleanup_inactive_users.sh</string>
+  </ProgramArguments>
+  <StartCalendarInterval>
+    <dict>
+      <key>Hour</key><integer>3</integer>
+      <key>Minute</key><integer>0</integer>
+      <key>Weekday</key><integer>0</integer>
+    </dict>
+  </StartCalendarInterval>
+  <RunAtLoad>false</RunAtLoad>
+  <StandardOutPath>/var/log/user_cleanup.log</StandardOutPath>
+  <StandardErrorPath>/var/log/user_cleanup.log</StandardErrorPath>
+</dict>
+</plist>
